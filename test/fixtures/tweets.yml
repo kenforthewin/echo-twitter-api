@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyString
+  user: MyString
+  topic: 1
+  retweet_count: 1
+  source: MyString
+  favorite_count: 1
+
+two:
+  text: MyString
+  user: MyString
+  topic: 1
+  retweet_count: 1
+  source: MyString
+  favorite_count: 1
