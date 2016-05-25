@@ -5,20 +5,16 @@ Setup
 -----
 
 1. set environment variables
-
-`ENV['ECHO_TWITTER_OAUTH_SECRET'] = ***`
-`ENV['ECHO_TWITTER_CONSUMER_SECRET'] = ***`
+`ENV['ECHO_TWITTER_OAUTH_SECRET'] = ***
+ENV['ECHO_TWITTER_CONSUMER_SECRET'] = ***`
 
 2. create and migrate db
-
 `bundle exec rake db:create db:migrate`
 
 3. seed initial tweets
-
 `rake update_tweets`
 
 4. run the server
-
 `rails s`
 
 
