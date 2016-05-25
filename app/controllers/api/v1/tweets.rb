@@ -4,24 +4,17 @@ module API
       include API::V1::Defaults
 
       resource :tweets do
-        desc "Return all tweets"
+        desc "Return all tweets filtered by topic"
         get "", root: :tweets do
-          Tweet.all
-        end
-
-        desc "Return healthcare tweets"
-        get "healthcare", root: :tweets do
-          Tweet.healthcare
-        end
-
-        desc "Return nasa tweets"
-        get "nasa", root: :tweets do
-          Tweet.nasa
-        end
-
-        desc "Return open source tweets"
-        get "open_source", root: :tweets do
-          Tweet.open_source
+          if params[:topic] == 'healthcare'
+            Tweet.healthcare
+          elsif params[:topic] == 'open_source'
+            Tweet.open_source
+          elsif params[:topic] == 'nasa'
+            Tweet.nasa
+          else
+            Tweet.all
+          end
         end
 
         desc "Return a tweet"
