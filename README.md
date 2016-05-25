@@ -27,3 +27,4 @@ Deployment
 4. `heroku run rake db:migrate`
 5. `heroku run rake update_tweets`
 6. Assign a [Heroku Scheduler](https://elements.heroku.com/addons/scheduler) dyno to the above rake task
+7. `heroku open`
